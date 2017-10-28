@@ -8,26 +8,27 @@ namespace VismaTasks
 {
     public class Tasks
     {
-        public bool canConstruct(string ransom, string magazine)
+        public bool CanConstruct(string ransom, string magazine)
         {
+            if(ransom == null || magazine == null)
+                return false;
+
             char[] ransomArray = ransom.ToCharArray();
             char[] magazineArray = magazine.ToCharArray();
 
-            int ransomcnt = ransomArray.Length;
-            int magazinecnt = magazineArray.Length;
+            int ransomCount = ransomArray.Length;
+            int magazineCount = magazineArray.Length;
 
-            int[] kiekis = new int[ransomcnt];
             int k = 0;
-            if (ransom == null || magazine == null)
+           
+
+            if (ransomCount > magazineCount)
                 return false;
 
-            if (ransomcnt > magazinecnt)
-                return false;
-
-            for (int i = 0; i < ransomcnt; i++)
+            for (int i = 0; i < ransomCount; i++)
             {
 
-                for (int j = i; j < magazinecnt; j++)
+                for (int j = i; j < magazineCount; j++)
                 {
                     if (ransomArray[i].Equals(magazineArray[j]))
                     {
@@ -36,7 +37,7 @@ namespace VismaTasks
                     }
                 }
             }
-            if (k == ransomcnt)
+            if (k == ransomCount)
                 return true;
 
             return false;
@@ -45,22 +46,22 @@ namespace VismaTasks
         public int[] Zeros(int[] nums)
         {
 
-            int positivenmb = 0;
+            int positiveNumber = 0;
             for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] != 0)
                 {
 
 
-                    if (nums[positivenmb] != nums[i])
-                        nums[positivenmb] = nums[i];
-                    positivenmb++;
+                    if (nums[positiveNumber] != nums[i])
+                        nums[positiveNumber] = nums[i];
+                    positiveNumber++;
                 }
             }
-            int zeroscnt = nums.Length - positivenmb;
-            if (zeroscnt != 0)
+            int zerosCount = nums.Length - positiveNumber;
+            if (zerosCount != 0)
             {
-                for (int i = 0; i < zeroscnt; i++)
+                for (int i = 0; i < zerosCount; i++)
                 {
                     nums[nums.Length - i - 1] = 0;
                 }

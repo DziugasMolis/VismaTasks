@@ -5,7 +5,7 @@ using VismaTasks;
 namespace TestsForTasks
 {
     [TestClass]
-    public class UnitTest1
+    public class Tests
     {
         [TestMethod]
         public void Task1Test1()
@@ -15,7 +15,7 @@ namespace TestsForTasks
 
             Tasks foo = new Tasks();
 
-            Assert.IsFalse(foo.canConstruct(ransom, magazine));
+            Assert.IsFalse(foo.CanConstruct(ransom, magazine));
         }
         [TestMethod]
         public void Task1Test2()
@@ -25,7 +25,7 @@ namespace TestsForTasks
 
             Tasks foo = new Tasks();
 
-            Assert.IsFalse(foo.canConstruct(ransom, magazine));
+            Assert.IsFalse(foo.CanConstruct(ransom, magazine));
         }
         [TestMethod]
         public void Task1Test3()
@@ -35,7 +35,7 @@ namespace TestsForTasks
 
             Tasks foo = new Tasks();
 
-            Assert.IsTrue(foo.canConstruct(ransom, magazine));
+            Assert.IsTrue(foo.CanConstruct(ransom, magazine));
         }
         [TestMethod]
         public void Task1Test4()
@@ -45,7 +45,7 @@ namespace TestsForTasks
 
             Tasks foo = new Tasks();
 
-            Assert.IsTrue(foo.canConstruct(ransom, magazine));
+            Assert.IsTrue(foo.CanConstruct(ransom, magazine));
         }
         [TestMethod]
         public void Task1Test5()
@@ -55,7 +55,7 @@ namespace TestsForTasks
 
             Tasks foo = new Tasks();
 
-            Assert.IsFalse(foo.canConstruct(ransom, magazine));
+            Assert.IsFalse(foo.CanConstruct(ransom, magazine));
         }
 
         [TestMethod]
